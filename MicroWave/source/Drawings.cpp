@@ -36,7 +36,7 @@ void CDrawings::DrawString(int x, int y, Color color, HFONT font, const wchar_t*
     pSurface->DrawSetTextPos(x, y);
     pSurface->DrawSetTextFont(font);
     pSurface->DrawSetTextColor(color);
-    pSurface->DrawPrintText(szString, wcslen(szString));
+    pSurface->DrawPrintText(szString, (int)wcslen(szString));
 }
 
 void CDrawings::DrawString(int x, int y, Color color, HFONT font, const char* szString) {
@@ -44,7 +44,7 @@ void CDrawings::DrawString(int x, int y, Color color, HFONT font, const char* sz
     pSurface->DrawSetTextPos(x, y);
     pSurface->DrawSetTextFont(font);
     pSurface->DrawSetTextColor(color);
-    pSurface->DrawPrintText(wString.c_str(), wcslen(wString.c_str()));
+    pSurface->DrawPrintText(wString.c_str(), (int)wcslen(wString.c_str()));
 }
 
 void CDrawings::DrawString(int x, int y, Color color, HFONT font, bool bCenter, const char* szString) {
@@ -58,7 +58,7 @@ void CDrawings::DrawString(int x, int y, Color color, HFONT font, bool bCenter, 
     pSurface->DrawSetTextPos(x, y);
     pSurface->DrawSetTextFont(font);
     pSurface->DrawSetTextColor(color);
-    pSurface->DrawPrintText(wString.c_str(), wcslen(wString.c_str()));
+    pSurface->DrawPrintText(wString.c_str(), (int)wcslen(wString.c_str()));
 }
 
 void CDrawings::DrawHealthbar(int x, int y, int w, int h, int health, Color color) {
